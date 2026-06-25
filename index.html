@@ -6,32 +6,47 @@
   <title>Servicios Cerca Valdivia</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f6f8;
-      color: #222;
+      color: #1f2937;
     }
 
     header {
-      background: #0f766e;
+      background: linear-gradient(135deg, #0f766e, #115e59);
       color: white;
-      padding: 45px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 36px;
+      font-size: 40px;
     }
 
     header p {
       font-size: 18px;
-      margin-top: 10px;
+      margin-top: 12px;
+    }
+
+    .boton-principal {
+      display: inline-block;
+      margin-top: 20px;
+      background: #22c55e;
+      color: white;
+      padding: 13px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     .contenedor {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 30px auto;
       padding: 20px;
     }
@@ -39,56 +54,136 @@
     .caja {
       background: white;
       padding: 25px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-radius: 14px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #111827;
     }
 
     input {
-      width: 90%;
-      max-width: 500px;
+      width: 100%;
+      max-width: 600px;
       padding: 14px;
       font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
     }
 
     .categorias {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 15px;
+      margin-top: 18px;
     }
 
     .categoria {
       background: #e0f2f1;
       padding: 18px;
-      border-radius: 10px;
+      border-radius: 12px;
       text-align: center;
       font-weight: bold;
+      color: #115e59;
+    }
+
+    .lista-negocios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
     }
 
     .negocio {
-      border-top: 1px solid #ddd;
-      padding-top: 15px;
-      margin-top: 15px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
     }
 
-    .boton {
+    .negocio h3 {
+      margin-top: 0;
+      color: #0f766e;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background: #ccfbf1;
+      color: #115e59;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .boton-whatsapp {
       display: inline-block;
       background: #25d366;
       color: white;
-      padding: 10px 16px;
+      padding: 11px 16px;
       border-radius: 8px;
       text-decoration: none;
+      margin-top: 10px;
       font-weight: bold;
     }
 
+    .planes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .plan {
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 22px;
+      background: #fafafa;
+    }
+
+    .plan h3 {
+      margin-top: 0;
+      color: #0f766e;
+    }
+
+    .precio {
+      font-size: 24px;
+      font-weight: bold;
+      color: #111827;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 14px;
+      margin-top: 15px;
+    }
+
     footer {
-      background: #222;
+      background: #111827;
       color: white;
       text-align: center;
-      padding: 25px;
+      padding: 28px;
       margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      .contenedor {
+        padding: 12px;
+      }
     }
   </style>
 </head>
@@ -98,17 +193,19 @@
   <header>
     <h1>Servicios Cerca Valdivia</h1>
     <p>Encuentra gasfiter, modista, electricista, técnicos y servicios cerca de ti</p>
+    <a class="boton-principal" href="#registro">Registrar mi negocio</a>
   </header>
 
   <main class="contenedor">
 
     <section class="caja">
       <h2>¿Qué servicio necesitas?</h2>
-      <input type="text" placeholder="Ejemplo: gasfiter, modista, electricista">
+      <p>Busca por rubro, sector o tipo de trabajo.</p>
+      <input type="text" id="busqueda" placeholder="Ejemplo: gasfiter, modista, electricista, técnico">
     </section>
 
     <section class="caja">
-      <h2>Categorías</h2>
+      <h2>Categorías principales</h2>
 
       <div class="categorias">
         <div class="categoria">Gasfitería</div>
@@ -123,34 +220,109 @@
     <section class="caja">
       <h2>Servicios destacados</h2>
 
-      <div class="negocio">
-        <h3>Gasfiter Don Pedro</h3>
-        <p><strong>Sector:</strong> Corvi, Valdivia</p>
-        <p>Reparación de cañerías, calefón, filtraciones y emergencias.</p>
-        <a class="boton" href="https://wa.me/56912345678" target="_blank">Contactar por WhatsApp</a>
-      </div>
+      <div class="lista-negocios">
 
-      <div class="negocio">
-        <h3>Modas y Arreglos Laura</h3>
-        <p><strong>Sector:</strong> Centro, Valdivia</p>
-        <p>Arreglos de ropa, bastas, cierres y confección simple.</p>
-        <a class="boton" href="https://wa.me/56987654321" target="_blank">Contactar por WhatsApp</a>
-      </div>
+        <div class="negocio" data-texto="gasfiter gasfitería calefón cañerías filtraciones corvi valdivia">
+          <span class="etiqueta">Gasfitería</span>
+          <h3>Gasfiter Don Pedro</h3>
+          <p><strong>Sector:</strong> Corvi, Valdivia</p>
+          <p>Reparación de cañerías, calefón, filtraciones y emergencias.</p>
+          <a class="boton-whatsapp" href="https://wa.me/56912345678" target="_blank">Contactar por WhatsApp</a>
+        </div>
 
-      <div class="negocio">
-        <h3>Electricista Valdivia Sur</h3>
-        <p><strong>Sector:</strong> Regional, Valdivia</p>
-        <p>Instalación de enchufes, luces, tableros y reparaciones eléctricas.</p>
-        <a class="boton" href="https://wa.me/56911111111" target="_blank">Contactar por WhatsApp</a>
-      </div>
+        <div class="negocio" data-texto="modista ropa arreglos bastas vestidos centro valdivia">
+          <span class="etiqueta">Modista</span>
+          <h3>Modas y Arreglos Laura</h3>
+          <p><strong>Sector:</strong> Centro, Valdivia</p>
+          <p>Arreglos de ropa, bastas, cierres, vestidos y confección simple.</p>
+          <a class="boton-whatsapp" href="https://wa.me/56987654321" target="_blank">Contactar por WhatsApp</a>
+        </div>
 
+        <div class="negocio" data-texto="electricista electricidad enchufes tablero luces instalación regional valdivia">
+          <span class="etiqueta">Electricidad</span>
+          <h3>Electricista Valdivia Sur</h3>
+          <p><strong>Sector:</strong> Regional, Valdivia</p>
+          <p>Instalación de enchufes, luces, tableros y reparaciones eléctricas.</p>
+          <a class="boton-whatsapp" href="https://wa.me/56911111111" target="_blank">Contactar por WhatsApp</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="caja">
+      <h2>Mapa de Valdivia</h2>
+      <p>Próximamente mostraremos los servicios por cercanía y sector.</p>
+
+      <iframe 
+        src="https://www.google.com/maps?q=Valdivia,Chile&output=embed"
+        loading="lazy">
+      </iframe>
+    </section>
+
+    <section class="caja" id="registro">
+      <h2>Registra tu negocio</h2>
+      <p>
+        ¿Tienes un servicio en Valdivia? Puedes aparecer en nuestro directorio y recibir contactos de personas que buscan servicios cerca de su sector.
+      </p>
+
+      <a class="boton-whatsapp" 
+         href="https://wa.me/569XXXXXXXX?text=Hola,%20quiero%20registrar%20mi%20negocio%20en%20Servicios%20Cerca%20Valdivia" 
+         target="_blank">
+         Solicitar inscripción por WhatsApp
+      </a>
+    </section>
+
+    <section class="caja">
+      <h2>Planes para negocios</h2>
+
+      <div class="planes">
+
+        <div class="plan">
+          <h3>Plan Básico</h3>
+          <p class="precio">$4.990/mes</p>
+          <p>Aparece en la lista de servicios con nombre, rubro y contacto.</p>
+        </div>
+
+        <div class="plan">
+          <h3>Plan Pro</h3>
+          <p class="precio">$9.990/mes</p>
+          <p>Incluye descripción, sector, botón de WhatsApp y mayor visibilidad.</p>
+        </div>
+
+        <div class="plan">
+          <h3>Plan Destacado</h3>
+          <p class="precio">$14.990/mes</p>
+          <p>Aparece como servicio destacado dentro de su categoría.</p>
+        </div>
+
+      </div>
     </section>
 
   </main>
 
   <footer>
     <p>© 2026 Servicios Cerca Valdivia</p>
+    <p>Directorio local de servicios para Valdivia</p>
   </footer>
+
+  <script>
+    const inputBusqueda = document.getElementById("busqueda");
+    const negocios = document.querySelectorAll(".negocio");
+
+    inputBusqueda.addEventListener("keyup", function() {
+      const texto = inputBusqueda.value.toLowerCase();
+
+      negocios.forEach(function(negocio) {
+        const contenido = negocio.dataset.texto.toLowerCase();
+
+        if (contenido.includes(texto)) {
+          negocio.style.display = "block";
+        } else {
+          negocio.style.display = "none";
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
