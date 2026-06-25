@@ -20,7 +20,7 @@
     header {
       background: linear-gradient(135deg, #0f766e, #115e59);
       color: white;
-      padding: 60px 20px;
+      padding: 65px 20px;
       text-align: center;
     }
 
@@ -60,9 +60,10 @@
     }
 
     .contenedor {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 30px auto;
       padding: 20px;
+      overflow: hidden;
     }
 
     .caja {
@@ -89,9 +90,10 @@
 
     .categorias {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 15px;
       margin-top: 18px;
+      width: 100%;
     }
 
     .categoria {
@@ -151,7 +153,7 @@
 
     .planes {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 18px;
       margin-top: 20px;
     }
@@ -168,10 +170,23 @@
       color: #0f766e;
     }
 
+    .plan-gratis {
+      border: 2px solid #22c55e;
+      background: #f0fdf4;
+    }
+
     .precio {
       font-size: 24px;
       font-weight: bold;
       color: #111827;
+    }
+
+    .nota {
+      background: #ecfeff;
+      border-left: 5px solid #0f766e;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
     }
 
     iframe {
@@ -211,9 +226,9 @@
   <header>
     <h1>Servicios Cerca Valdivia</h1>
     <p>Encuentra gasfiter, modista, electricista, técnicos y servicios cerca de ti</p>
-    <div class="version">Versión 1.0</div>
+    <div class="version">Versión de lanzamiento</div>
     <br>
-    <a class="boton-principal" href="#registro">Registrar mi negocio</a>
+    <a class="boton-principal" href="#registro">Inscribir mi servicio gratis</a>
   </header>
 
   <main class="contenedor">
@@ -234,11 +249,17 @@
         <div class="categoria">Técnicos</div>
         <div class="categoria">Construcción</div>
         <div class="categoria">Limpieza</div>
+        <div class="categoria">Jardinería</div>
+        <div class="categoria">Fletes</div>
+        <div class="categoria">Mascotas</div>
+        <div class="categoria">Belleza</div>
+        <div class="categoria">Clases</div>
+        <div class="categoria">Otros servicios</div>
       </div>
     </section>
 
     <section class="caja">
-      <h2>Servicios destacados</h2>
+      <h2>Servicios disponibles en Valdivia</h2>
 
       <div class="lista-negocios">
 
@@ -247,7 +268,7 @@
           <h3>Gasfiter Don Pedro</h3>
           <p><strong>Sector:</strong> Corvi, Valdivia</p>
           <p>Reparación de cañerías, calefón, filtraciones y emergencias.</p>
-          <a class="boton-whatsapp" href="https://wa.me/56912345678" target="_blank">Contactar por WhatsApp</a>
+          <a class="boton-whatsapp" href="https://wa.me/56997748303" target="_blank">Contactar por WhatsApp</a>
         </div>
 
         <div class="negocio" data-texto="modista ropa arreglos bastas vestidos centro valdivia">
@@ -255,7 +276,7 @@
           <h3>Modas y Arreglos Laura</h3>
           <p><strong>Sector:</strong> Centro, Valdivia</p>
           <p>Arreglos de ropa, bastas, cierres, vestidos y confección simple.</p>
-          <a class="boton-whatsapp" href="https://wa.me/56987654321" target="_blank">Contactar por WhatsApp</a>
+          <a class="boton-whatsapp" href="https://wa.me/56997748303" target="_blank">Contactar por WhatsApp</a>
         </div>
 
         <div class="negocio" data-texto="electricista electricidad enchufes tablero luces instalación regional valdivia">
@@ -263,7 +284,7 @@
           <h3>Electricista Valdivia Sur</h3>
           <p><strong>Sector:</strong> Regional, Valdivia</p>
           <p>Instalación de enchufes, luces, tableros y reparaciones eléctricas.</p>
-          <a class="boton-whatsapp" href="https://wa.me/56911111111" target="_blank">Contactar por WhatsApp</a>
+          <a class="boton-whatsapp" href="https://wa.me/56997748303" target="_blank">Contactar por WhatsApp</a>
         </div>
 
       </div>
@@ -280,39 +301,47 @@
     </section>
 
     <section class="caja" id="registro">
-      <h2>Registra tu negocio</h2>
+      <h2>Registra tu negocio gratis</h2>
       <p>
-        ¿Tienes un servicio en Valdivia? Puedes aparecer en nuestro directorio y recibir contactos de personas que buscan servicios cerca de su sector.
+        ¿Tienes un servicio en Valdivia? Durante el lanzamiento puedes inscribir tu servicio sin costo para aparecer en nuestro directorio local.
       </p>
 
+      <div class="nota">
+        <strong>Plan gratis de lanzamiento:</strong> incluye nombre del servicio, rubro, sector, descripción corta y contacto por WhatsApp.
+      </div>
+
       <a class="boton-whatsapp" 
-         href="https://wa.me/56997748303?text=Hola,%20quiero%20registrar%20mi%20negocio%20en%20Servicios%20Cerca%20Valdivia" 
+         href="https://wa.me/56997748303?text=Hola,%20quiero%20inscribir%20mi%20servicio%20gratis%20en%20Servicios%20Cerca%20Valdivia" 
          target="_blank">
-         Inscribir mi servicio por WhatsApp
+         Inscribir mi servicio gratis por WhatsApp
       </a>
     </section>
 
     <section class="caja">
       <h2>Planes para negocios</h2>
+      <p>Comienza gratis durante el lanzamiento. Más adelante podrás mejorar tu visibilidad con planes destacados.</p>
 
       <div class="planes">
 
-        <div class="plan">
-          <h3>Plan Básico</h3>
-          <p class="precio">$4.990/mes</p>
-          <p>Aparece en la lista de servicios con nombre, rubro y contacto.</p>
-        </div>
-
-        <div class="plan">
-          <h3>Plan Pro</h3>
-          <p class="precio">$9.990/mes</p>
-          <p>Incluye descripción, sector, botón de WhatsApp y mayor visibilidad.</p>
+        <div class="plan plan-gratis">
+          <h3>Plan Gratis de lanzamiento</h3>
+          <p class="precio">$0</p>
+          <p>Publica tu servicio sin costo mientras iniciamos la plataforma en Valdivia.</p>
+          <p><strong>Incluye:</strong> nombre, rubro, sector, descripción corta y contacto.</p>
         </div>
 
         <div class="plan">
           <h3>Plan Destacado</h3>
-          <p class="precio">$14.990/mes</p>
-          <p>Aparece como servicio destacado dentro de su categoría.</p>
+          <p class="precio">$4.990/mes</p>
+          <p>Aparece con mayor visibilidad dentro de tu categoría y sector.</p>
+          <p><strong>Incluye:</strong> botón de WhatsApp, descripción más completa y prioridad en la lista.</p>
+        </div>
+
+        <div class="plan">
+          <h3>Plan Premium</h3>
+          <p class="precio">$9.990/mes</p>
+          <p>Ideal para negocios que quieren mayor exposición en la plataforma.</p>
+          <p><strong>Incluye:</strong> posición destacada, más información del servicio y promoción prioritaria.</p>
         </div>
 
       </div>
