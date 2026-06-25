@@ -54,6 +54,37 @@
   }
 }
 
+.header-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.header-texto {
+  text-align: left;
+}
+
+.header-imagen img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 900px) {
+  .header-contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .header-texto {
+    text-align: center;
+  }
+}
+
     header h1 {
       margin: 0;
       font-size: 42px;
@@ -254,12 +285,22 @@
 <body>
 
   <header>
-    <h1>Servicios Cerca La Unión</h1>
-    <p>Encuentra gasfiter, modista, electricista, técnicos y servicios cerca de ti</p>
-    <div class="version">Versión de lanzamiento</div>
-    <br>
-    <a class="boton-principal" href="#registro">Inscribir mi servicio gratis</a>
-  </header>
+  <div class="header-contenido">
+    
+    <div class="header-texto">
+      <h1>Servicios Cerca La Unión</h1>
+      <p>Encuentra gasfiter, modista, electricista, técnicos y servicios cerca de ti</p>
+      <div class="version">Versión de lanzamiento</div>
+      <br>
+      <a class="boton-principal" href="#registro">Inscribir mi servicio gratis</a>
+    </div>
+
+    <div class="header-imagen">
+      <img src="vista-aerea-la-union.jpg" alt="Vista aérea de La Unión">
+    </div>
+
+  </div>
+</header>
 
   <main class="contenedor">
 
