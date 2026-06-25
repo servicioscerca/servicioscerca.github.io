@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Cerca Valdivia</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+    }
+
+    header {
+      background: #0f766e;
+      color: white;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .contenedor {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .caja {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    input {
+      width: 90%;
+      max-width: 500px;
+      padding: 14px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .categorias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .categoria {
+      background: #e0f2f1;
+      padding: 18px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .negocio {
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+      margin-top: 15px;
+    }
+
+    .boton {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Servicios Cerca Valdivia</h1>
+    <p>Encuentra gasfiter, modista, electricista, técnicos y servicios cerca de ti</p>
+  </header>
+
+  <main class="contenedor">
+
+    <section class="caja">
+      <h2>¿Qué servicio necesitas?</h2>
+      <input type="text" placeholder="Ejemplo: gasfiter, modista, electricista">
+    </section>
+
+    <section class="caja">
+      <h2>Categorías</h2>
+
+      <div class="categorias">
+        <div class="categoria">Gasfitería</div>
+        <div class="categoria">Electricidad</div>
+        <div class="categoria">Modistas</div>
+        <div class="categoria">Técnicos</div>
+        <div class="categoria">Construcción</div>
+        <div class="categoria">Limpieza</div>
+      </div>
+    </section>
+
+    <section class="caja">
+      <h2>Servicios destacados</h2>
+
+      <div class="negocio">
+        <h3>Gasfiter Don Pedro</h3>
+        <p><strong>Sector:</strong> Corvi, Valdivia</p>
+        <p>Reparación de cañerías, calefón, filtraciones y emergencias.</p>
+        <a class="boton" href="https://wa.me/56912345678" target="_blank">Contactar por WhatsApp</a>
+      </div>
+
+      <div class="negocio">
+        <h3>Modas y Arreglos Laura</h3>
+        <p><strong>Sector:</strong> Centro, Valdivia</p>
+        <p>Arreglos de ropa, bastas, cierres y confección simple.</p>
+        <a class="boton" href="https://wa.me/56987654321" target="_blank">Contactar por WhatsApp</a>
+      </div>
+
+      <div class="negocio">
+        <h3>Electricista Valdivia Sur</h3>
+        <p><strong>Sector:</strong> Regional, Valdivia</p>
+        <p>Instalación de enchufes, luces, tableros y reparaciones eléctricas.</p>
+        <a class="boton" href="https://wa.me/56911111111" target="_blank">Contactar por WhatsApp</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Servicios Cerca Valdivia</p>
+  </footer>
+
+</body>
+</html>
