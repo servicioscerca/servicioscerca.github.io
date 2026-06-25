@@ -26,7 +26,7 @@
 
     header h1 {
       margin: 0;
-      font-size: 40px;
+      font-size: 42px;
     }
 
     header p {
@@ -34,15 +34,29 @@
       margin-top: 12px;
     }
 
+    .version {
+      display: inline-block;
+      margin-top: 15px;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
     .boton-principal {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 25px;
       background: #22c55e;
       color: white;
-      padding: 13px 22px;
+      padding: 15px 25px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 17px;
+    }
+
+    .boton-principal:hover {
+      background: #16a34a;
     }
 
     .contenedor {
@@ -124,11 +138,15 @@
       display: inline-block;
       background: #25d366;
       color: white;
-      padding: 11px 16px;
+      padding: 12px 17px;
       border-radius: 8px;
       text-decoration: none;
       margin-top: 10px;
       font-weight: bold;
+    }
+
+    .boton-whatsapp:hover {
+      background: #1ebe5d;
     }
 
     .planes {
@@ -174,7 +192,7 @@
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 30px;
+        font-size: 31px;
       }
 
       header p {
@@ -193,6 +211,8 @@
   <header>
     <h1>Servicios Cerca Valdivia</h1>
     <p>Encuentra gasfiter, modista, electricista, técnicos y servicios cerca de ti</p>
+    <div class="version">Versión 2 actualizada</div>
+    <br>
     <a class="boton-principal" href="#registro">Registrar mi negocio</a>
   </header>
 
@@ -266,7 +286,7 @@
       </p>
 
       <a class="boton-whatsapp" 
-         href="https://wa.me/569XXXXXXXX?text=Hola,%20quiero%20registrar%20mi%20negocio%20en%20Servicios%20Cerca%20Valdivia" 
+         href="https://wa.me/56912345678?text=Hola,%20quiero%20registrar%20mi%20negocio%20en%20Servicios%20Cerca%20Valdivia" 
          target="_blank">
          Solicitar inscripción por WhatsApp
       </a>
